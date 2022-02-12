@@ -393,6 +393,7 @@ function App() {
                     </s.Container>
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledButton
+                        style = {{marginTop = 10}}
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
@@ -400,7 +401,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "PUBLIC SALE"}
+                        {claimingNft ? "BUSY" : "PUBLIC_SALE"}
                       </StyledButton>
                     </s.Container>
                   </>
