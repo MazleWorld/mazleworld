@@ -379,7 +379,7 @@ function App() {
                       </StyledRoundButton>
                     </s.Container>
                     <s.SpacerSmall />
-                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                    <s.Container ai={"center"} jc={"right"} fd={"row"}>
                       <StyledButton
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
@@ -391,7 +391,7 @@ function App() {
                         {claimingNft ? "BUSY" : "MINT"}
                       </StyledButton>
                     </s.Container>
-                    <s.Container ai={"left"} jc={"center"} fd={"row"}>
+                    <s.Container ai={"center"} jc={"left"} fd={"row"}>
                       <StyledButton
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
