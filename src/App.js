@@ -152,6 +152,38 @@ function App() {
       });
   };
 
+  const claimNFTs1 = () => {
+    let cost = CONFIG.WEI_COST1;
+    let gasLimit = CONFIG.GAS_LIMIT;
+    let totalCostWei = String(cost * mintAmount);
+    let totalGasLimit = String(gasLimit * mintAmount);
+    console.log("Cost: ", totalCostWei);
+    console.log("Gas limit: ", totalGasLimit);
+    setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
+    setClaimingNft(true);
+    blockchain.smartContract.methods
+      .mint(blockchain.account, mintAmount)
+      .send({
+        gasLimit: String(totalGasLimit),
+        to: CONFIG.CONTRACT_ADDRESS,
+        from: blockchain.account,
+        value: totalCostWei,
+      })
+      .once("error", (err) => {
+        console.log(err);
+        setFeedback("Sorry, something went wrong please try again later.");
+        setClaimingNft(false);
+      })
+      .then((receipt) => {
+        console.log(receipt);
+        setFeedback(
+          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit TofuNFT to view it.`
+        );
+        setClaimingNft(false);
+        dispatch(fetchData(blockchain.account));
+      });
+  };
+
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
     if (newMintAmount < 1) {
@@ -397,7 +429,7 @@ function App() {
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
-                          claimNFTs();
+                          claimNFTs1();
                           getData();
                         }}
                       >
