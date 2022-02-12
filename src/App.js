@@ -324,18 +324,17 @@ function App() {
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
                   1 {CONFIG.SYMBOL}  costs{" "}
+                </s.TextTitle>
+                <s.TextTitle
+                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                >
+                  For WhiteList = {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}
                 </s.TextTitle>
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {CONFIG.SYMBOL} For WhiteList = {CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL}
-                </s.TextTitle>
-                <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
-                >
-                  1 {CONFIG.SYMBOL} For Public Sale = {CONFIG.DISPLAY_COST1}{" "}
+                  For Public Sale = {CONFIG.DISPLAY_COST1}{" "}
                   {CONFIG.NETWORK.SYMBOL}
                 </s.TextTitle>
                 <s.SpacerXSmall />
