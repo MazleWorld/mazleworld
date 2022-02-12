@@ -401,7 +401,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "PUBLIC_SALE"}
+                        {claimingNft ? "BUSY" : "PUBLIC SALE"}
                       </StyledButton>
                     </s.Container>
                   </>
