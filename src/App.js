@@ -379,7 +379,7 @@ function App() {
                       </StyledRoundButton>
                     </s.Container>
                     <s.SpacerSmall />
-                    <s.Container ai={"center"} jc={"right"} fd={"row"}>
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledButton
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
@@ -388,10 +388,10 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "MINT"}
+                        {claimingNft ? "BUSY" : "WHITELIST"}
                       </StyledButton>
                     </s.Container>
-                    <s.Container ai={"center"} jc={"left"} fd={"row"}>
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
                       <StyledButton
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
@@ -400,7 +400,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "MINT"}
+                        {claimingNft ? "BUSY" : "PUBLIC SALE"}
                       </StyledButton>
                     </s.Container>
                   </>
