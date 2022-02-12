@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xcb80b1aff5c3dea59c10d15e2a57336d149c3bb7",
+  "SCAN_LINK": "https://polygonscan.com/token/0xcb80b1aff5c3dea59c10d15e2a57336d149c3bb7",
+  "NETWORK": {
+    "NAME": "Polygon",
+    "SYMBOL": "Matic",
+    "ID": 137
+  },
+  "NFT_NAME": "Mazle World Collection",
+  "SYMBOL": "MZW",
+  "MAX_SUPPLY": 33,
+  "WEI_COST": 11000000000000000000,
+  "DISPLAY_COST": 11,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "TofuNFT",
+  "MARKETPLACE_LINK": "https://tofunft.com/discover/items?contracts=12509&network=137",
+  "SHOW_BACKGROUND": false
+}
